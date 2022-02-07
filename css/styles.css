@@ -1,0 +1,7 @@
+/* MENÚ */
+ul.menu{text-align: center; background: rgb(231, 231, 117);}
+ul.menu > li{display: inline-block; margin: 0px 20px; padding: 10px;}
+ul.menu > li a{text-decoration: none; color: rgb(0, 0, 0); }
+ul.menu > li a:hover{color: #00f;}
+
+li{list-style: none;}
