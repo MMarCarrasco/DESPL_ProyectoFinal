@@ -8,26 +8,18 @@ li{list-style: none;}
 
 
 ul li{margin: 5%}
-ul li #oferta{
-    color: red;
-    text-decoration: line-through;
-}
+ul li #oferta{color: red; text-decoration: line-through;}
 
 /*Centrar los datos del producto*/
-.producto .p{
-    margin-top: 20%;
-}
+.producto .p{margin-top: 20%;}
 
 /*Icono papelera*/
-.eliminar i{
-    font-size: 20px;
-}
+.eliminar i{ font-size: 20px;}
+
+.total p{ font-size: 24px;color: black;}
 
 /*Div vacio*/
-.vacio p{
-    font-size: 24px;
-    color: black;
-}
+.vacio p{ font-size: 24px;color: black;}
 
 /*Totop*/
 #totop{
@@ -45,3 +37,4 @@ ul li #oferta{
 }
   
 #totop i{color: rgb(255, 255, 255);}
+
