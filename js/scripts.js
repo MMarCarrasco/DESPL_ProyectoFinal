@@ -60,10 +60,6 @@ $(document).ready(function(){
         $(".ptotal p").html("Total: " + totalEnvio + " €");
         
     }) 
-
-    
-    
-  
       
     
   
