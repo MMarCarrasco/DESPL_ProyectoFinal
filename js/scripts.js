@@ -1,3 +1,6 @@
+var total =0;
+var envio = 3.00;
+var totalEnvio = 0;
 $(document).ready(function(){
 
     //Cambiar el numero de productos de la cesta
@@ -19,40 +22,50 @@ $(document).ready(function(){
 
     //Eliminar productos
     $(".lista").on('click', '.eliminar', function(){
+        
         $(this).closest('li').remove();
         
         $("#shopping-cart span").html(elementos());
 
-        if(productos == 0){
-            $(".vacio p").html("No hay productos en la cesta");
+        total = 0;
+        $(".producto .precio span.precio").each(function (){
+        
+            var precio = parseFloat($(this).text());  
+            //console.log(precio);        
+            total = total + precio;   
+            console.log(total); 
+            totalEnvio = total + envio; 
+            $(".ptotal p").html("Total: " + totalEnvio + " €"); 
+            
+        }) 
+
+        if(elementos() == 0){
+            $(".vacio ").html("No hay productos en la cesta");
+            totalEnvio = 0;
+    
+            $(".ptotal p").html("Total: " + totalEnvio + " €");
 
         }
-
     })
 
-    $(".precio span").each(function(){
-        var precio = $(".precio span#precio").text();
-        console.log(precio);
-        var res = precio.split(" ");
-        var precioN = parseFloat(precio);
-        var precioNn = parseFloat(res);
-        console.log(res);
-        console.log(precioN);
-        var total =  precioN;
-        console.log(total);
-    })
+    $(".producto .precio span.precio").each(function precioT(){
+        
+        var precio = parseFloat($(this).text());  
+        //console.log(precio);        
+        total = total + precio;   
+        console.log(total); 
+        
+        totalEnvio = total + envio;
 
+        $(".ptotal p").html("Total: " + totalEnvio + " €");
+        
+    }) 
 
-    /*var precio1 = $(".precio span#precio1").text();
-    var precioN1 = parseFloat(precio1);
-    var precio2 = $(".precio span#precio2").text();
-    var precioN2 = parseFloat(precio2);
-
-    var total = precioN1 + precioN2;
-    console.log(total);*/
-
-
-
+    
+    
+  
+      
+    
   
 })
 
