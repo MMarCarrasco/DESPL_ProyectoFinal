@@ -2,6 +2,7 @@ var total =0;
 var envio = 3.00;
 var totalEnvio = 0;
 $(document).ready(function(){
+    document.documentElement.setAttribute('lang', navigator.language);
 
     //Cambiar el numero de productos de la cesta
     $("#shopping-cart span").html(elementos);
@@ -44,6 +45,9 @@ $(document).ready(function(){
             totalEnvio = 0;
     
             $(".ptotal p").html("Total: " + totalEnvio + " €");
+            $(".vacio").css("margin-bottom", "7% ");
+            $(".cabeceraP").remove();
+            $(".envio").remove();
 
         }
     })

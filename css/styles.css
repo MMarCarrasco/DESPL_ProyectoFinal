@@ -1,3 +1,4 @@
+li{list-style: none;}
 /* CABECERA */
 ul.menu{text-align: center; background: #f7f2ee;}
 ul.menu > li a{text-decoration: none; color: #3f5850 }
@@ -5,9 +6,7 @@ ul.menu > li a:hover{color: #a8cfc3;}
 header .user-utils > div > a i{color: #3f5850; font-size: 20px;}
 header .user-utils > div > #my-account i{color: #3f5850;}
 header .user-utils  a{ color: black; text-decoration: none;}
-
-ul li{margin: 5%}
-ul li #oferta{color: red; text-decoration: line-through;}
+header .user-utils #shopping-cart > span{background: #aa0909; width: 17px; height: 14px; margin-left: -15px; font-size: 11px;}
 
 /*Icono papelera*/
 .eliminar i{ font-size: 20px;}
@@ -34,12 +33,19 @@ ul li #oferta{color: red; text-decoration: line-through;}
   
 #totop i{color: rgb(255, 255, 255);}
 
+/*Cabecera de la lista de producto*/
+.cabeceraP{background:#f7f2ee ;color: #3f5850; margin: 2% 0%; height: 70px;}
+.cabeceraP li{ margin-top: 1%;font-size: 30px;font-weight: 700;}
 /*Productos*/
-.producto div{ margin-top: 6%; font-size: 20px;border-bottom: 2px solid black;}
-.producto .nombre, .producto .imagen{margin-top: 0;}
+ul li{margin: 5%}
+ul li #oferta{color: #b60303; text-decoration: line-through;}
+.producto h3{color: #3f5850; font-weight: 700; margin-bottom: 1%;}
+.listadoProducto div {color: black;}
+.producto div{ margin-top: 4%; font-size: 20px;border-bottom: 2px solid black;}
+.producto .imagen{margin-top: 0;}
 .lista{margin-bottom: 0;}
 
-.total p.vacio{color: #a8cfc3;}
+.total p.vacio{color: #a8cfc3; font-weight: 700; font-size: 60px;}
 
 /*Total*/
 .total{margin-top: 0px;}
@@ -53,7 +59,5 @@ footer .footer_links ul li a:hover{color: #a8cfc3;}
 
 @media (max-width:460px){
     .producto div{ margin-top: 6%; font-size: 20px;border-bottom: none;}
-    header .user-utils  a{color: white;}
-
-    
+    header .user-utils  a{color: white;} 
 }
